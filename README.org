@@ -59,6 +59,15 @@
 				 "_att"))))
   #+END_SRC
 
+ my own version , the image folder is ~/blog/rfigures/
+
+ #+BEGIN_SRC  emacs-lisp
+ (setq org-attach-screenshot-dirfunction
+       (lambda () 
+ 	(progn (assert (buffer-file-name))
+ 	       (concat default-directory "rfigures"))))
+ #+END_SRC
+
   If =org-attach-screenshot-relative-links= is set to =t= the filename references
   placed in the org file will be relative filenames. This is probably the best
   default, since normally you want to be able to move the document together with

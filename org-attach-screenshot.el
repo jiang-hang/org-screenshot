@@ -95,8 +95,9 @@ written to the PROPERTIES section of a headline in addition to
 the links being already placed inside the text."
   
   (interactive (list current-prefix-arg
-		     (let ((defval (format-time-string
-				    "screenshot-%Y%m%d-%H%M%S.png")))
+;		     (let ((defval (format-time-string
+;				    "screenshot-%Y%m%d-%H%M%S.png")))
+       		     (let ((defval (concat (file-name-base) "_1.png")))
 		       (read-string
 			(format "Screenshot base filename (%s): "
 				defval)
